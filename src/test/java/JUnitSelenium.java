@@ -152,7 +152,8 @@ public class JUnitSelenium {
         WebElement e = driver.findElement(By.tagName("tbody"));
         List<WebElement> rows = e.findElements(By.tagName("tr"));
         Assert.assertThat(rows.size(), is(6));
-
+        assertTrue(rows.get(rows.size() - 1).getText().contains("Rio"));
+        assertTrue(rows.get(rows.size() - 1).getText().contains("Kia"));
     }
 
 }
